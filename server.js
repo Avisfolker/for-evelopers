@@ -1,8 +1,6 @@
 const fs = require("fs");
 const host = '0.0.0.0';
 const port = '9022';
-
-
 const express = require("express");
 const http = require("http");
 const bodyParser = require('body-parser');
@@ -22,6 +20,8 @@ apiRoutes.use((req, res, next) => { //allow cross origin requests
 apiRoutes.use(bodyParser.json());
 
 app.use('/api', apiRoutes);
+
+// подключаем скрипты для фронтенда
 app.use('/', express.static(__dirname + '/www')); // redirect root
 app.use('/js', express.static(__dirname + '/node_modules/angular'));
 app.use('/js', express.static(__dirname + '/node_modules/angular-ui-router/release'));
@@ -30,11 +30,13 @@ app.use('/js', express.static(__dirname + '/node_modules/jquery/dist'));
 app.use('/js', express.static(__dirname + '/node_modules/popper.js/dist/umd'));
 app.use('/js', express.static(__dirname + '/node_modules/angular-ui-bootstrap/dist'));
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
+
+
 app.set('view engine', 'html');
 app.use(express.static(__dirname + '/public'));
 
 
-apiRoutes.post('/getArrayEmployees', (req, res) => {
+apiRoutes.post('/getArrayEmployees', (req, res) => { // получаем ситрудников
   let filePath = path.join(__dirname, 'employees.json');
 
   fs.readFile(filePath, {encoding: 'utf-8'}, (err,data) =>{
@@ -46,7 +48,7 @@ apiRoutes.post('/getArrayEmployees', (req, res) => {
   });
 
 });
-apiRoutes.post('/saveArrayEmployees', (req, res) => {
+apiRoutes.post('/saveArrayEmployees', (req, res) => { // сохраняем сотрудников
   let filePath = path.join(__dirname, 'employees.json');
 
   fs.readFile(filePath, {encoding: 'utf-8'}, (err,data) => {

@@ -18,9 +18,7 @@ app.controller('task1Ctrl', function ($http,$interval,$uibModal)  {
         }
       }
     });
-    modalInstance.result.then( (selectedItem) => {
-      vm.selected = selectedItem;
-
+    modalInstance.result.then( () => { //выполняется после закрытия модального окна
     },  () => {
       vm.getArrayEmployees();
     });
