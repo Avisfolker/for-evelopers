@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Avisfolker/city-list.git"
+    "url": "git+https://github.com/Avisfolker/for-evelopers.git"
   },
   "author": "Andrey Andreev",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Avisfolker/city-list/issues"
+    "url": "https://github.com/Avisfolker/for-evelopers/issues"
   },
-  "homepage": "https://github.com/Avisfolker/city-list#readme",
+  "homepage": "https://github.com/Avisfolker/for-evelopers#readme",
   "dependencies": {
     "angular": "^1.6.5",
     "angular-ui-bootstrap": "^2.5.0",

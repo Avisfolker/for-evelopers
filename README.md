@@ -9,6 +9,7 @@ nodejs
 - npm
 - nodejs
 - angularjs
+- bootstrap
 
 запустить
 - npm install
