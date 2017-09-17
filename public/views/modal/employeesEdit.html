@@ -1,0 +1,40 @@
+<!--<div class="modal-dialog {{size ? 'modal-' + size : ''}}"><div class="modal-content" uib-modal-transclude></div></div>-->
+<div >
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="vm.cancel()">&times;</button>
+            <h4 class="modal-title">Редактирование сотрудника</h4>
+
+
+        </div>
+        <div class="modal-body">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Имя</th>
+                    <th>Фамилия</th>
+                    <th>Стаж</th>
+                    <th>Возраст</th>
+                    <th>Адрес</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr >
+                    <td ><input type="text"  ng-model="vm.emp.name"></td>
+                    <td ><input type="text"  ng-model="vm.emp.second_name"></td>
+                    <td ><input type="text"  ng-model="vm.emp.experience"></td>
+                    <td ><input type="text"  ng-model="vm.emp.age"></td>
+                    <td ><input type="text"  ng-model="vm.emp.address"></td>
+                </tr>
+
+                </tbody>
+            </table>
+
+            <!--<ul>-->
+                <!--<li ng-repeat="item in vm.emp" >1</li>-->
+            <!--</ul>-->
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.cancel()">Close</button>
+            <button type="button" class="btn btn-primary" ng-click="vm.ok()">Save changes</button>
+        </div>
+</div>

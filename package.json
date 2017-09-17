@@ -1,0 +1,30 @@
+{
+  "name": "for-trend",
+  "version": "1.0.0",
+  "description": "list conponent",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Avisfolker/city-list.git"
+  },
+  "author": "Andrey Andreev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Avisfolker/city-list/issues"
+  },
+  "homepage": "https://github.com/Avisfolker/city-list#readme",
+  "dependencies": {
+    "angular": "^1.6.5",
+    "angular-ui-bootstrap": "^2.5.0",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.5",
+    "angular-ui-router": "^1.0.3",
+    "body-parser": "^1.18.1",
+    "bootstrap": "^3.3.7",
+    "express": "^4.15.4",
+    "request": "^2.81.0"
+  }
+}

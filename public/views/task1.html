@@ -1,0 +1,28 @@
+<div ng-controller="task1Ctrl as task1" class="container">
+    <h1>Cписок сотрудников</h1>
+    <br>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Стаж</th>
+            <th>Возраст</th>
+            <th>Адрес</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in task1.employees">
+            <td>{{item.name}}</td>
+            <td>{{item.second_name}}</td>
+            <td>{{item.experience}}</td>
+            <td>{{item.age}}</td>
+            <td>{{item.address}}</td>
+            <td><button  class="btn btn-primary" ng-click="task1.openModal(item);selected.item = item">Редактировать</button></td>
+        </tr>
+
+        </tbody>
+    </table>
+
+</div>
